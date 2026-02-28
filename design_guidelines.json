@@ -1,0 +1,146 @@
+{
+  "project_name": "GharKaCare",
+  "design_philosophy": {
+    "identity": "The Supportive Didi",
+    "core_values": [
+      "Warmth over Efficiency",
+      "Validation over Productivity",
+      "Simplicity over Features",
+      "Culture over Corporate"
+    ],
+    "vibe": "Like a cup of hot chai on a rainy morning - comforting, familiar, and essential.",
+    "anti_patterns": [
+      "No 'Task Completed' jargon -> Use 'Ho gaya! badhiya'",
+      "No sharp corners -> Rounded everything",
+      "No pure black (#000000) -> Use Deep Charcoal",
+      "No bright 'Tech Blue' -> Use Earthy Terracotta",
+      "No complex charts -> Simple summaries"
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "\"Kurale\", \"Merriweather\", serif",
+      "body": "\"Nunito\", sans-serif"
+    },
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Nunito:wght@400;500;600;700&display=swap');"
+    ],
+    "scale": {
+      "h1": "text-3xl font-bold tracking-tight text-primary",
+      "h2": "text-2xl font-semibold text-foreground",
+      "h3": "text-xl font-medium text-foreground",
+      "body": "text-base font-normal leading-relaxed text-muted-foreground",
+      "small": "text-sm font-medium text-muted-foreground/80"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#FDFBF7",
+      "foreground": "#3E3E3E",
+      "primary": "#C05621",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#81B29A",
+      "secondary_foreground": "#FFFFFF",
+      "muted": "#F2E8CF",
+      "muted_foreground": "#6B6B6B",
+      "accent": "#E6CCB2",
+      "accent_foreground": "#3E3E3E",
+      "card": "#FFFFFF",
+      "card_foreground": "#3E3E3E",
+      "border": "#E6CCB2",
+      "input": "#F2E8CF",
+      "destructive": "#E76F51"
+    },
+    "semantic_names": {
+      "background": "Malai (Cream)",
+      "primary": "Mitti (Terracotta)",
+      "secondary": "Tulsi (Sage)",
+      "accent": "Chandan (Sandalwood)"
+    }
+  },
+  "layout": {
+    "spacing": {
+      "container_padding": "p-6 md:p-8",
+      "section_gap": "gap-6",
+      "item_gap": "gap-3"
+    },
+    "border_radius": {
+      "default": "rounded-2xl",
+      "card": "rounded-3xl",
+      "button": "rounded-full"
+    },
+    "grids": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+      "list": "flex flex-col gap-4"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-medium text-lg",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/90 h-12 px-8 rounded-full shadow-md font-medium",
+      "ghost": "hover:bg-accent/20 text-foreground hover:text-primary font-medium"
+    },
+    "cards": {
+      "base": "bg-card text-card-foreground rounded-3xl border border-border/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]",
+      "interactive": "cursor-pointer active:scale-95"
+    },
+    "inputs": {
+      "base": "h-12 rounded-2xl border-border/60 bg-white/50 px-4 text-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-muted-foreground/60"
+    }
+  },
+  "visual_enhancers": {
+    "textures": {
+      "noise": "Make sure to add a subtle noise texture to the background to give it that 'handmade paper' feel.",
+      "glass": "backdrop-blur-md bg-white/70 border border-white/20"
+    },
+    "shadows": {
+      "soft": "shadow-[0_4px_20px_-2px_rgba(192,86,33,0.1)]",
+      "floating": "shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]"
+    }
+  },
+  "motion": {
+    "page_transition": "initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4, ease: 'easeOut' }}",
+    "micro_interaction": "whileTap={{ scale: 0.95 }} transition={{ type: 'spring', stiffness: 400, damping: 17 }}"
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "hero_bg",
+        "url": "https://images.unsplash.com/photo-1584428885051-d80a38d86b39?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Morning Chai Calm"
+      },
+      {
+        "category": "empty_state",
+        "url": "https://images.unsplash.com/photo-1736680056361-6a2f6e35fa50?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Indian Spices Flat Lay"
+      },
+      {
+        "category": "celebration",
+        "url": "https://images.unsplash.com/photo-1649941872646-2c7de759a4b3?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Tea on Windowsill"
+      }
+    ],
+    "icons": "Use 'lucide-react' with strokeWidth={1.5} for a delicate, elegant look."
+  },
+  "instructions_to_main_agent": [
+    "1. THEME SETUP: Update tailwind.config.js with the 'Mitti' and 'Tulsi' color palette provided above immediately.",
+    "2. FONT SETUP: Add the Google Fonts import to index.css at the very top.",
+    "3. HINGLISH FIRST: All default placeholder text and empty states must use warm Hinglish (e.g., 'Kya banega aaj?', 'Sabzi khatam?').",
+    "4. NO LOGIN: Ensure the app loads directly into the 'Home' screen. Use localStorage for all data persistence.",
+    "5. BOTTOM NAV: Implement a sticky bottom navigation bar with 4 clear tabs. It must be 'Glassmorphic'.",
+    "6. SOFT UI: Avoid all 1px sharp borders. Use soft shadows and muted backgrounds to define separation.",
+    "7. IMAGE USAGE: Use the provided image URLs for the 'Home' header (Morning Chai) and 'Empty List' states.",
+    "8. TOASTS: Use 'sonner' but style it to look like a friendly note, not a system alert."
+  ],
+  "universal_guidelines": [
+    "Do not use generic centered layouts.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures and noise overlays are recommended.",
+    "Prioritize using pre-existing components from src/components/ui.",
+    "Components MUST use named exports.",
+    "Pages MUST use default exports."
+  ]
+}
