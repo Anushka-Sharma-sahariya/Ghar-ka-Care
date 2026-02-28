@@ -1,34 +1,122 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* GharKaCare - Warm, Simple, Supportive */
+
+/* Ensure mobile-first viewport */
+.App {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
-.App-link {
-    color: #61dafb;
+/* Touch feedback for mobile */
+.touch-active {
+  transition: transform 0.1s ease-out;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.touch-active:active {
+  transform: scale(0.97);
+}
+
+/* Smooth page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* Custom checkbox style */
+[data-state="checked"] {
+  animation: checkPop 0.2s ease-out;
+}
+
+@keyframes checkPop {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Strikethrough animation */
+.line-through {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+/* Bottom nav safe area */
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 20px), 100px);
+}
+
+/* Prevent text selection on buttons */
+button {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Warm shadow for floating elements */
+.warm-shadow {
+  box-shadow: 0 4px 20px -2px rgba(192, 86, 33, 0.1);
+}
+
+/* Calendar styling override */
+.rdp {
+  --rdp-cell-size: 40px !important;
+  --rdp-accent-color: hsl(24, 68%, 44%) !important;
+  --rdp-background-color: hsl(45, 47%, 88%) !important;
+}
+
+.rdp-day_selected {
+  background-color: hsl(24, 68%, 44%) !important;
+  color: white !important;
+}
+
+.rdp-day_today {
+  border: 2px solid hsl(24, 68%, 44%) !important;
+  font-weight: bold;
+}
+
+/* Input focus states */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Scrollbar hiding for horizontal scroll */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tab list horizontal scroll */
+[role="tablist"] {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+[role="tablist"]::-webkit-scrollbar {
+  display: none;
 }
